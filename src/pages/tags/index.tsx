@@ -48,6 +48,13 @@ class Index extends Component<PageOwnProps, PageState> {
       .then(res => res.json())
       .then(res => {
         this.setState({ trend: res.data.trend, isLoading: false });
+      })
+      .catch(err => {
+        console.log(err);
+        this.setState({
+          trend: "SomeThing Error Please Try Again Later !",
+          isLoading: false
+        });
       });
   };
 
