@@ -13,7 +13,7 @@ class Index extends Component {
     return (
       <View>
         <View className="pd0.5rem pdb3rem">
-          <Text className="h3">Index Page</Text>
+          <Text className="h3">user Page</Text>
         </View>
         <BottomTabBar />
       </View>
