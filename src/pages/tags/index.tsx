@@ -1,13 +1,11 @@
 import Taro, { Component, Config } from "@tarojs/taro";
 import { View, Text } from "@tarojs/components";
-import * as fetchImport from "isomorphic-unfetch";
 import { AtButton } from "taro-ui";
 
 import { BottomTabBar } from "../../components/BottomTabBar";
+import { fetchData } from "../../untils/fetchData";
 
 import "./index.scss";
-
-const fetch = fetchImport.default || fetchImport;
 
 type PageOwnProps = {};
 
@@ -40,7 +38,7 @@ class Index extends Component<PageOwnProps, PageState> {
   GetTrend = () => {
     this.setState({ trend: "loading", isLoading: true });
 
-    fetch("http://localhost:4000/", {
+    fetchData({
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ query: "{ trend }" })
