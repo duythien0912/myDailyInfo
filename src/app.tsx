@@ -1,4 +1,6 @@
 import "@tarojs/async-await";
+import "taro-ui/dist/style/index.scss";
+
 import Taro, { Component, Config } from "@tarojs/taro";
 import { Provider } from "@tarojs/redux";
 
@@ -16,7 +18,7 @@ import "./app.scss";
 
 const store = configStore();
 
-class App extends Component {
+class App extends Component<any, any> {
   /**
    * 指定config的类型声明为: Taro.Config
    *

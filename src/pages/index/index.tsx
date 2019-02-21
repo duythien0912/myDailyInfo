@@ -1,8 +1,9 @@
 // import { ComponentClass } from 'react'
 import Taro, { Component, Config } from "@tarojs/taro";
-import { View, Button, Text, Progress } from "@tarojs/components";
+import { View, Text } from "@tarojs/components";
 import { connect } from "@tarojs/redux";
 import * as fetchImport from "isomorphic-unfetch";
+import { AtButton, AtTabBar } from "taro-ui";
 
 import { add, minus, asyncAdd } from "../../actions/counter";
 
@@ -36,6 +37,7 @@ type PageOwnProps = {};
 
 type PageState = {
   trend: string;
+  current: number;
 };
 
 type IProps = PageStateProps & PageDispatchProps & PageOwnProps;
@@ -74,7 +76,8 @@ class Index extends Component<PageOwnProps, PageState> {
   };
 
   state = {
-    trend: "loading"
+    trend: "loading",
+    current: 0
   };
 
   componentDidMount() {
@@ -103,15 +106,24 @@ class Index extends Component<PageOwnProps, PageState> {
 
   componentDidHide() {}
 
+  handleClick = value => {
+    this.setState({
+      current: value
+    });
+  };
+
   render() {
     const { trend = "" } = this.state;
     return (
-      <View className="pd5rem">
-        <Text className="h3">Từ khóa Top Trend</Text>
+      <View>
+        <View className="pd5rem">
+          <AtButton type="primary">Get New</AtButton>
 
-        <div dangerouslySetInnerHTML={{ __html: trend }} />
+          <Text className="h3">Từ khóa Top Trend</Text>
 
-        {/* <Button className="add_btn" onClick={this.props.add}>
+          <div dangerouslySetInnerHTML={{ __html: trend }} />
+
+          {/* <Button className="add_btn" onClick={this.props.add}>
           +
         </Button>
         <Button className="dec_btn" onClick={this.props.dec}>
@@ -127,6 +139,24 @@ class Index extends Component<PageOwnProps, PageState> {
           <Text>Hello, World</Text>
         </View>
         <Progress percent={80} strokeWidth={2} active activeColor="blue" /> */}
+        </View>
+
+        <AtTabBar
+          fixed
+          tabList={[
+            {
+              title: "Trend",
+              iconType: "home",
+              text: "new"
+            },
+            { title: "Cart", iconType: "shopping-bag" },
+            { title: "User", iconType: "user" },
+            { title: "Tags", iconType: "tags" },
+            { title: "SB", iconType: "list", text: "100", max: 99 }
+          ]}
+          onClick={this.handleClick.bind(this)}
+          current={this.state.current}
+        />
       </View>
     );
   }
