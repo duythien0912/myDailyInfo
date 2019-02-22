@@ -1,9 +1,9 @@
 import Taro, { Component, Config } from "@tarojs/taro";
 import { View, Text } from "@tarojs/components";
 import { AtButton } from "taro-ui";
+import { fetchData } from "@utils/fetchData";
 
 import { BottomTabBar } from "../../components/BottomTabBar";
-import { fetchData } from "../../untils/fetchData";
 
 import "./index.scss";
 

@@ -1,3 +1,4 @@
+@import "./mixins.scss";
 @import "~taro-ui/dist/style/index.scss";
 .pd0\.5rem {
     padding: .5rem;
@@ -9,4 +10,10 @@
 
 .mgt1rem {
     margin-top: 1rem;
+}
+
+.limitText {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

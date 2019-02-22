@@ -1,5 +1,7 @@
 import Taro, { Component, Config } from "@tarojs/taro";
-import { View, Text } from "@tarojs/components";
+import { View } from "@tarojs/components";
+import ListSBItem from "@components/ListSBItem";
+
 import { BottomTabBar } from "../../components/BottomTabBar";
 
 import "./index.scss";
@@ -11,10 +13,8 @@ class Index extends Component {
 
   render() {
     return (
-      <View>
-        <View className="pd0.5rem pdb3rem">
-          <Text className="h3">SB Page</Text>
-        </View>
+      <View className="pd0.5rem pdb3rem">
+        <ListSBItem />
         <BottomTabBar />
       </View>
     );

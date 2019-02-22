@@ -1,3 +1,6 @@
+// eslint-disable-next-line import/no-commonjs
+const path = require("path");
+
 const config = {
   projectName: "myDailyInfo",
   date: "2019-2-19",
@@ -9,6 +12,13 @@ const config = {
   },
   sourceRoot: "src",
   outputRoot: "dist",
+  alias: {
+    "@components": path.resolve(__dirname, "..", "src/components"),
+    "@assets": path.resolve(__dirname, "..", "src/assets"),
+    "@actions": path.resolve(__dirname, "..", "src/actions"),
+    "@utils": path.resolve(__dirname, "..", "src/utils"),
+    "@constants": path.resolve(__dirname, "..", "src/constants")
+  },
   plugins: {
     babel: {
       sourceMap: true,
