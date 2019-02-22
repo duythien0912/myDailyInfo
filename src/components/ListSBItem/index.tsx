@@ -4,8 +4,6 @@ import { AtButton } from "taro-ui";
 import Loading from "@components/Loading";
 import { fetchData } from "@utils/fetchData";
 
-import urlDemoImg from "./demoimg.jpg";
-
 import "./index.scss";
 
 class ListSBItem extends Component<any, any> {
@@ -55,7 +53,7 @@ class ListSBItem extends Component<any, any> {
             key={`ListSBItem-${data.id}`}
             className="at-row at-row__justify--center"
           >
-            <View style="height:100px" className="at-col at-col-6">
+            <View className="at-col at-col-6">
               <Image
                 style={{ width: "auto", height: "auto" }}
                 lazyLoad
