@@ -1,0 +1,214 @@
+.hd {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    border-top-left-radius: 20;
+    border-top-right-radius: 20;
+    background-color: #f5f5f5;
+    width: 342;
+    height: 56;
+}
+
+.info {
+    margin-top: 15;
+    margin-left: 20;
+    line-height: 24rem;
+    white-space: nowrap;
+    color: #333333;
+    font-family: PingFangSC;
+    font-size: 24;
+    font-weight: 400;
+}
+
+.icon {
+    margin-top: 15;
+    margin-left: 11;
+    width: 16;
+    height: 26;
+}
+
+.bd {
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 342;
+    height: 342;
+}
+
+.item {
+    position: relative;
+    width: 342;
+    height: 342;
+}
+
+.wantBuyPopularHotelsNearWrap {
+    box-sizing: border-box;
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    align-items: flex-start;
+    flex-direction: row;
+    background-color: rgba(51, 51, 51, 0.60);
+    padding-right: 10;
+    padding-left: 11;
+    height: 32;
+}
+
+.wantBuyPopularHotelsNear {
+    margin-top: 4;
+    line-height: 22rem;
+    white-space: nowrap;
+    color: #ffffff;
+    font-family: PingFangSC;
+    font-size: 22;
+    font-weight: 400;
+}
+
+.main {
+    margin-top: 20;
+    margin-left: 20;
+    max-width: 290;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 26rem;
+    white-space: nowrap;
+    color: #333333;
+    font-family: PingFangSC;
+    font-size: 26;
+    font-weight: 400;
+}
+
+.submain {
+    display: flex;
+    flex-direction: row;
+    margin-top: 9;
+    margin-left: 20;
+    height: 24;
+}
+
+.price {
+    text-align: left;
+    line-height: 24rem;
+    white-space: nowrap;
+    color: #999999;
+    font-family: PingFangSC;
+    font-size: 22;
+    font-weight: 400;
+}
+
+.originPrice {
+    max-width: 224;
+    overflow: hidden;
+    text-align: left;
+    text-decoration: line-through;
+    text-overflow: ellipsis;
+    line-height: 24rem;
+    white-space: nowrap;
+    color: #999999;
+    font-family: PingFangSC;
+    font-size: 22;
+    font-weight: 400;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    margin-top: 13;
+    width: 342;
+    height: 27;
+}
+
+.priceIcon {
+    margin-top: 1;
+    margin-left: 21;
+    width: 72;
+    height: 24;
+}
+
+.yuan {
+    margin-top: 4;
+    margin-left: 5;
+    line-height: 20rem;
+    white-space: nowrap;
+    color: #ff5000;
+    font-family: PingFangSC;
+    font-size: 20;
+    font-weight: 500;
+}
+
+.money {
+    max-width: 212;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 24rem;
+    white-space: nowrap;
+    color: #ff5000;
+    font-family: PingFangSC;
+    font-size: 30;
+    font-weight: 500;
+}
+
+.ft {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 18;
+    padding-right: 19;
+    padding-left: 20;
+    width: 342;
+    height: 62;
+}
+
+.tagWrap {
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    border-width: 1;
+    border-style: solid;
+    border-radius: 50;
+    border-color: #FF5000;
+    background-color: #ffffff;
+    padding-right: 13;
+    padding-left: 13;
+    height: 60;
+}
+
+.tag {
+    margin-top: 14;
+    line-height: 33rem;
+    white-space: nowrap;
+    color: #ff5000;
+    font-family: PingFangSC;
+    font-size: 24;
+    font-weight: 400;
+}
+
+.tagWrap2 {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 50;
+    background-color: #ff5000;
+    width: 146;
+    height: 60;
+}
+
+.tag2 {
+    margin-top: 14;
+    max-width: 134;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    line-height: 33rem;
+    white-space: nowrap;
+    color: #ffffff;
+    font-family: PingFangSC;
+    font-size: 24;
+    font-weight: 400;
+}

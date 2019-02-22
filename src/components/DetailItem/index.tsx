@@ -1,10 +1,10 @@
 import Taro, { Component, Config } from "@tarojs/taro";
-import { View, Text } from "@tarojs/components";
-import { BottomTabBar } from "../../components/BottomTabBar";
+import { View } from "@tarojs/components";
 
 import "./index.scss";
+import { SearchBar } from "../SearchBar";
 
-class Index extends Component {
+class Index extends Component<any, any> {
   config: Config = {
     navigationBarTitleText: "首页"
   };
@@ -12,8 +12,7 @@ class Index extends Component {
   render() {
     return (
       <View>
-        <Text>Cart</Text>
-        <BottomTabBar />
+        <SearchBar />
       </View>
     );
   }
