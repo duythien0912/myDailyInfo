@@ -45,6 +45,11 @@ class BottomTabBar extends Component<any, any> {
           url: `/pages/sb/index`
         });
         break;
+      case 5:
+        Taro.redirectTo({
+          url: `/pages/dashboard/index`
+        });
+        break;
       default:
         break;
     }
@@ -66,6 +71,8 @@ class BottomTabBar extends Component<any, any> {
           return this.setState({ current: 3 });
         case "/pages/sb/index":
           return this.setState({ current: 4 });
+        case "/pages/dashboard/index":
+          return this.setState({ current: 5 });
         default:
           return this.setState({ current: 0 });
       }
@@ -87,7 +94,8 @@ class BottomTabBar extends Component<any, any> {
             { title: "Cart", iconType: "shopping-bag" },
             { title: "User", iconType: "user" },
             { title: "Tags", iconType: "tags" },
-            { title: "SB", iconType: "list", text: "100", max: 99 }
+            { title: "SB", iconType: "list", text: "100", max: 99 },
+            { title: "Dashboard", iconType: "settings" }
           ]}
           onClick={this.handleClick.bind(this)}
           current={this.state.current}

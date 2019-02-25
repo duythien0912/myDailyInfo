@@ -9,3 +9,8 @@ export const fetchData = config => {
       : "http://localhost:4000/";
   return fetch(host, config);
 };
+
+export const fetchDataShopee = (url, config) => {
+  const host = url;
+  return fetch(host, config);
+};

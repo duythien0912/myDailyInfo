@@ -31,6 +31,7 @@ class App extends Component<any, any> {
       "pages/cart/index",
       "pages/user/index",
       "pages/tags/index",
+      "pages/dashboard/index",
       "pages/sb/index"
     ],
     window: {

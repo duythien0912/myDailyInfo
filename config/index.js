@@ -75,6 +75,9 @@ const config = {
     publicPath: "/",
     esnextModules: ["taro-ui"],
     staticDirectory: "static",
+    router: {
+      mode: 'browser' // "hash or browser"
+    },
     module: {
       postcss: {
         autoprefixer: {

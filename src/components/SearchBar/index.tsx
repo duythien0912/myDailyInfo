@@ -23,7 +23,7 @@ class SearchBar extends Taro.Component<any, any> {
   render() {
     return (
       <AtSearchBar
-        // fixed
+        fixed
         showActionButton
         value={this.state.value}
         onChange={this.onChange.bind(this)}
